@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(${CMAKE_PROJECT_NAME} VERSION 0.0.0 LANGUAGES CXX)
+project(${CMAKE_PROJECT_NAME} LANGUAGES CXX)
 
 # == BUILD ==
 
@@ -23,6 +23,7 @@ target_compile_features(${PROJECT_NAME}
 
 target_link_libraries(${PROJECT_NAME}
         PRIVATE
+        HDF5Creator::Version
         HDF5Creator::ExampleModule
         imgui
         PUBLIC)
